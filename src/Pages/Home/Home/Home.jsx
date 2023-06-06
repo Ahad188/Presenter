@@ -2,7 +2,7 @@
 
 const Home = () => {
      return (
-          <div>
+          <div className="mt-96">
                <h1>This is a Home section </h1>
                <p>banner section</p>
           </div>
