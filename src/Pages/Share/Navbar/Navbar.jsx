@@ -15,6 +15,7 @@ const Navbar = () => {
          <li><Link className="text-xl" to="/">Home</Link></li>
         <li><Link className="text-xl" to="/instructors">Instructors</Link></li>
         <li><Link className="text-xl" to="/classes">Classes</Link></li>
+         
         {
             user ? <>
                 <span className="flex text-xl justify-between items-center">{user?.displayName}

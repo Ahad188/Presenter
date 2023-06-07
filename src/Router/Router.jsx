@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Instructors from "../Pages/Instractor/Instructors";
 import Classes from "../Pages/Classes/Classes";
+ 
 
 const router = createBrowserRouter([
      {
@@ -30,7 +31,8 @@ const router = createBrowserRouter([
           {
                path:'register',
                element:<Register/>
-          }
+          },
+          
        ]
      },
    ]);

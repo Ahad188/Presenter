@@ -1,10 +1,13 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useState } from "react";
+import SocialLogin from "../Share/SochailLogin/SocialLogin";
 
  
 
 const Register = () => {
+     const [show, setShow] = useState(false)
      const {createUser,updateUserProfile} = useAuth()
      const { register, handleSubmit } = useForm();
 
@@ -62,11 +65,12 @@ const Register = () => {
                 <span className="label-text text-xl">Password :</span>
               </label>
               <input
-                type="password"
+                type={show ? 'text' : 'password'}
                 {...register("password")}
                 placeholder="Password"
                 className="input input-bordered w-full max-w-xs"
               />
+              <span onClick={()=>setShow(!show) }>show PassWord</span>
             </div>
             <div className="form-control mt-6">
               <input type="submit" className="btn bg-[#2e9cf0] w-80" value="Login" />
@@ -75,7 +79,7 @@ const Register = () => {
                         <p> Already Have a account ? Please <Link to='/login' className="link"> Login</Link></p>
                    </dir>
               <div>
-              <h3 className="mt-4 btn">Google</h3>
+               <SocialLogin></SocialLogin>
               </div>
             </div>
           </form>

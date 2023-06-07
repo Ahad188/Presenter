@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useState } from "react";
+import SocialLogin from "../Share/SochailLogin/SocialLogin";
+
 
 const Login = () => {
      const [show, setShow] = useState(false)
@@ -49,7 +51,7 @@ const Login = () => {
             placeholder="Password"
             className="input input-bordered w-full max-w-xs"
           />
-          <p onClick={()=>setShow(!show) } className="link">Show password</p>
+          <span onClick={()=>setShow(!show) } className="link">Show password</span>
         </div>
         <div className="form-control mt-6">
           <input type="submit" className="btn bg-[#2e9cf0] w-80" value="Login" />
@@ -58,7 +60,7 @@ const Login = () => {
                     <p>I have no account ? Please <Link to='/register' className="link">Register</Link></p>
                </dir>
           <div>
-          <h3 className="mt-4 btn">Google</h3>
+           <SocialLogin></SocialLogin>
           </div>
         </div>
       </form>
