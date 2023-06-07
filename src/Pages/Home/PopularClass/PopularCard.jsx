@@ -1,9 +1,14 @@
+import useAuth from "../../../hooks/useAuth";
+
 const PopularCard = ({ data }) => {
 //   console.log(data);
   const { image, studentCount, subject, description,sit } = data;
-
+const {user} = useAuth()
 const handelCard = (data)=>{
-     console.log(data);
+     if(user && user?.email){
+
+          console.log(data);
+     }
 }
 
 

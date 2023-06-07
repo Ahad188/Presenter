@@ -1,7 +1,7 @@
  
 
 const TeacherCard = ({teacher}) => {
-     console.log(teacher);
+     // console.log(teacher);
      const {teacherName,subject,totalStudents,photo,email} = teacher;
      return (
           <div className="card w-96 bg-base-100 shadow-xl">
