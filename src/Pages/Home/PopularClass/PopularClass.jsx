@@ -5,7 +5,7 @@ import PopularCard from "./PopularCard";
 
 const PopularClass = () => {
      const [datas, setData] = useState();
-console.log(datas);
+// console.log(datas);
      useEffect(()=>{
           fetch('../../../../public/Class.json')
           .then(res=>res.json())

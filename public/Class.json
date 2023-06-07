@@ -4,7 +4,7 @@
        "subject": "News Presenter",
        "description": "A profession or skill where individuals present news and information to the public through broadcasting platforms.",
        "studentCount": 50,
-       "image": "https://example.com/news-presenter.jpg",
+       "image": "https://i.ibb.co/Z2NbyG7/Free-Vector-Realistic-blue-news-studio-interior.jpg",
        "price": 100,
        "sit": 1,
        "teacherName": "John Smith"
@@ -14,7 +14,7 @@
        "subject": "Public Speaker",
        "description": "A skill or activity that involves delivering speeches or presentations to an audience in an effective and engaging manner.",
        "studentCount": 80,
-       "image": "https://example.com/public-speaker.jpg",
+       "image": "https://i.ibb.co/FxBJM4K/Picture-Perfect-Magnolia-Market-Classroom-Makeover.png",
        "price": 80,
        "sit": 1,
        "teacherName": "Jane Doe"
@@ -24,7 +24,7 @@
        "subject": "Leadership",
        "description": "The ability to guide, inspire, and influence others towards achieving common goals or objectives.",
        "studentCount": 70,
-       "image": "https://example.com/leadership.jpg",
+       "image": "https://static8.depositphotos.com/1377527/953/i/450/depositphotos_9530215-stock-photo-business-motivation.jpg",
        "price": 120,
        "sit": 0,
        "teacherName": "Michael Johnson"
@@ -34,7 +34,7 @@
        "subject": "Anchoring",
        "description": "The act of hosting or presenting programs, events, or shows, often in the media or entertainment industry.",
        "studentCount": 60,
-       "image": "https://example.com/anchoring.jpg",
+       "image": "https://i.ibb.co/1qZHvYf/How-To-Become-A-Voice-Over-Artist-With-Your-PC.jpg",
        "price": 90,
        "sit": 1,
        "teacherName": "Sarah Thompson"
@@ -44,17 +44,17 @@
        "subject": "Presentation Skills",
        "description": "The ability to effectively convey information, ideas, or messages to an audience using visual aids, public speaking techniques, and engaging delivery.",
        "studentCount": 90,
-       "image": "https://example.com/presentation-skills.jpg",
+       "image": "https://i.ibb.co/61h5Tvt/Hard-Skills-vs-Soft-Skills-Best-Skills-for-Your-Resume.jpg",
        "price": 150,
        "sit": 1,
        "teacherName": "Robert Wilson"
      },
      {
        "id": 6,
-       "subject": "কবিতা আবৃত্তি (Poetry Recitation)",
+       "subject": "Poetry Recitation",
        "description": "A practice of reciting poetry aloud, paying attention to rhythm, intonation, and expression, to enhance the artistic and emotional impact of the poem.",
        "studentCount": 40,
-       "image": "https://example.com/poetry-recitation.jpg",
+       "image": "https://i.ibb.co/zGPrb4p/3-Solutions-to-the-Most-Common-Marriage-Problems.jpg",
        "price": 70,
        "sit": 0,
        "teacherName": "Emily Lee"
@@ -64,7 +64,7 @@
        "subject": "Voice Artist",
        "description": "A profession or skill that involves providing voice-overs or voice acting for various mediums like commercials, animations, audiobooks, or films.",
        "studentCount": 55,
-       "image": "https://example.com/voice-artist.jpg",
+       "image": "https://i.ibb.co/qpDQWB2/Disk-Jockey-singing.png",
        "price": 110,
        "sit": 1,
        "teacherName": "David Clark"
@@ -74,7 +74,7 @@
        "subject": "Report Writing",
        "description": "The process of preparing structured, concise, and objective documents that convey information, findings, or recommendations about a particular subject or event.",
        "studentCount": 75,
-       "image": "https://example.com/report-writing.jpg",
+       "image": "https://i.ibb.co/kqSCY1j/BVE-annual-report-2018-EIGA.jpg",
        "price": 95,
        "sit": 1,
        "teacherName": "Jennifer Davis"
