@@ -17,7 +17,7 @@ const PopularClass = () => {
 
 //      },[])
 
-     const { data: datas=[]} = useQuery({
+     const { refetch,data: datas=[]} = useQuery({
           queryKey: ['classes'],
           queryFn: async ()=>{
                const res = await fetch('http://localhost:5000/classes')
@@ -30,7 +30,11 @@ const PopularClass = () => {
            
           <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
                 {
-                    datas?.slice(0,6).map(((data)=> <PopularCard key={data._id} data={data}></PopularCard>))
+                    datas?.slice(0,6).map(((data)=> <PopularCard 
+                    key={data._id} 
+                    data={data}
+                    refech={refetch}
+                    ></PopularCard>))
                 }
           </div>
           

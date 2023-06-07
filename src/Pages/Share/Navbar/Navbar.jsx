@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.jpg";
 import useAuth from "../../../hooks/useAuth";
+import useClass from "../../../hooks/useClass";
  
 
 const Navbar = () => {
       const {user,logOut} = useAuth()
+      const [classes] = useClass()
       const handleLogOut=()=>{
           logOut()
           .then(()=>{})
@@ -15,6 +17,13 @@ const Navbar = () => {
          <li><Link className="text-xl" to="/">Home</Link></li>
         <li><Link className="text-xl" to="/instructors">Instructors</Link></li>
         <li><Link className="text-xl" to="/classes">Classes</Link></li>
+        <li>
+            <Link to="/" className="text-xl">
+                
+                    <div className="badge bg-[#78c1f8]">+{classes.length || 0}</div>
+               
+            </Link>
+        </li>
          
         {
             user ? <>
