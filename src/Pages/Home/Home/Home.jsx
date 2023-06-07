@@ -1,10 +1,14 @@
+import Banner from "../Banner/Banner";
+import PopularClass from "../PopularClass/PopularClass";
+
  
 
 const Home = () => {
      return (
-          <div className="mt-96">
-               <h1>This is a Home section </h1>
-               <p>banner section</p>
+          <div className="mt-5">
+               <Banner/>
+                
+               <PopularClass/>
           </div>
      );
 };
