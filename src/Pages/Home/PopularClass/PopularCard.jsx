@@ -1,9 +1,9 @@
 const PopularCard = ({ data }) => {
 //   console.log(data);
-  const { image, studentCount, subject, description } = data;
+  const { image, studentCount, subject, description,sit } = data;
 
 const handelCard = (data)=>{
-     // console.log(data);
+     console.log(data);
 }
 
 
@@ -20,6 +20,8 @@ const handelCard = (data)=>{
       <div className="card-body items-center text-center">
         <h2 className="card-title">{subject}</h2>
         <p>{description}</p>
+        {/* <p>{sit}</p> */}
+        <p> set Available : {studentCount}</p>
         <div className="card-actions">
           <button className="btn" onClick={()=>handelCard(data)}>Join to Class</button>
         </div>
