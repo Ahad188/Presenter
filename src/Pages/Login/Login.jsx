@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { useState } from "react";
 
 const Login = () => {
+     const [show, setShow] = useState(false)
      const {signIn} = useAuth()
      const navigate = useNavigate();
      const location = useLocation();
@@ -42,11 +44,12 @@ const Login = () => {
             <span className="label-text text-xl">Password :</span>
           </label>
           <input
-            type="password"
+            type={show ? 'text' : 'password'}
             {...register("password")}
             placeholder="Password"
             className="input input-bordered w-full max-w-xs"
           />
+          <p onClick={()=>setShow(!show) } className="link">Show password</p>
         </div>
         <div className="form-control mt-6">
           <input type="submit" className="btn bg-[#2e9cf0] w-80" value="Login" />
