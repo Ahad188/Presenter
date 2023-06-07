@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PopularCard from "../PopularClass/PopularCard";
+ 
 import TeacherCard from "./TeacherCard";
 
  
