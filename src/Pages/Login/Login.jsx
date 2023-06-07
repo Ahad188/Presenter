@@ -1,10 +1,26 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
+     const {signIn} = useAuth()
+     const navigate = useNavigate();
+     const location = useLocation();
+
+     const from = location.state?.from?.pathname || "/";
+
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+     // console.log(data)
+     signIn(data.email,data.password)
+     .then((result)=>{
+          const login = result.user;
+          console.log(login);
+          navigate(from, { replace: true });
+     })
+
+};
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
