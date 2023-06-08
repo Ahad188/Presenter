@@ -1,4 +1,5 @@
 import { Link,Outlet } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
  
  
 
@@ -6,7 +7,8 @@ import { Link,Outlet } from "react-router-dom";
 
 const Dashboard = () => {
     // todo : load data from the server to have dynamics isAdmin based on data
-     const isAdmin = true; 
+     // const isAdmin = true; 
+     const [isAdmin] = useAdmin()
     
      return (
           <div className="drawer lg:drawer-open bg-[#afe1f1]">
