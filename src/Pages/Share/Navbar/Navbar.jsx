@@ -18,7 +18,7 @@ const Navbar = () => {
         <li><Link className="text-xl" to="/instructors">Instructors</Link></li>
         <li><Link className="text-xl" to="/classes">Classes</Link></li>
         <li>
-            <Link to="/" className="text-xl">
+            <Link to="/dashboard/my-class" className="text-xl">
                 
                     <div className="badge bg-[#78c1f8]">+{classes.length || 0}</div>
                

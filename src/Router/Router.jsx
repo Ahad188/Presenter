@@ -6,6 +6,8 @@ import Register from "../Pages/Register/Register";
 import Instructors from "../Pages/Instractor/Instructors";
 import Classes from "../Pages/Classes/Classes";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../LayOut/Dashboard";
+import Myclass from "../Pages/Dasboard/Myclass/Myclass";
  
 
 const router = createBrowserRouter([
@@ -36,6 +38,16 @@ const router = createBrowserRouter([
           
        ]
      },
+     {
+          path:'dashboard',
+          element:<Dashboard></Dashboard>,
+          children:[
+               {
+                    path:'my-class',
+                    element:<Myclass/>
+               }
+          ]
+     }
    ]);
 
    export default router;
