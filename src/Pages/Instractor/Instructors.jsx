@@ -1,28 +1,27 @@
 import { useEffect, useState } from "react";
 import TeacherCard from "../Home/PopularTeacher/TeacherCard";
 import AllTeacher from "../../Component/AllTeacher";
+import { useQuery } from "@tanstack/react-query";
  
  
 
  
  
  const Instructors = () => {
-      const [ teacher, setTechier] = useState()
-     useEffect(() => {
-       fetch("../../../public/teacher.json")
-         .then((res) => res.json())
-         .then((data) => {
-          //  console.log(data);
-           setTechier(data)
-         });
-     }, []);
-     console.log(teacher);
+       
+     const {data: teacher=[]} = useQuery({
+          queryKey:['classes'],
+          queryFn: async ()=>{
+               const  res = await fetch('http://localhost:5000/classes')
+               return res.json()
+          }
+     })
      return (
         <>
          
         {
           teacher?.map(teacher=> <AllTeacher
-          key={teacher.id}
+          key={teacher._id}
           teacher={teacher}
           ></AllTeacher>)
         }

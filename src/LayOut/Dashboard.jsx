@@ -1,11 +1,13 @@
 import { Link,Outlet } from "react-router-dom";
  
+ 
 
  
 
 const Dashboard = () => {
     // todo : load data from the server to have dynamics isAdmin based on data
      const isAdmin = true; 
+    
      return (
           <div className="drawer lg:drawer-open bg-[#afe1f1]">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />

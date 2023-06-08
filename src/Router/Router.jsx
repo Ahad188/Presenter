@@ -49,7 +49,7 @@ const router = createBrowserRouter([
                },
                {
                     path:'allusers',
-                    element:<Allusers/>
+                    element:<Allusers/>,
                }
           ]
      }
