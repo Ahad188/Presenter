@@ -16,7 +16,19 @@ import { useLocation, useNavigate } from "react-router-dom";
           .then(result =>{
                const logGoogleUser = result.user;
                console.log(logGoogleUser);
-               navigate(from, { replace: true });
+               const saveUser = {name: logGoogleUser.displayName,email:logGoogleUser.email}
+                    fetch('http://localhost:5000/users',{
+                    method:"POST",
+                    headers:{"content-type":"application/json"},
+                    body: JSON.stringify(saveUser)
+                  })
+                  .then(res=>res.json())
+                  .then(()=>{
+                    navigate(from, { replace: true });
+                    })
+
+
+                
           })
      }
      return (

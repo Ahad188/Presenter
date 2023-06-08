@@ -1,8 +1,10 @@
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
+ 
 
  
 
 const Dashboard = () => {
+    
      return (
           <div className="drawer lg:drawer-open bg-[#afe1f1]">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
