@@ -17,7 +17,7 @@ const PopularClass = () => {
 
 //      },[])
 
-     const { refetch,data: datas=[]} = useQuery({
+     const { refetch,data: datas =[]} = useQuery({
           queryKey: ['classes'],
           queryFn: async ()=>{
                const res = await fetch('http://localhost:5000/classes')

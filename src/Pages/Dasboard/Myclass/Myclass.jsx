@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import useClass from "../../../hooks/useClass";
+ 
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
+import useClass from "../../../hooks/useClass";
 
 const Myclass = () => {
+   
   const [classes,refetch] = useClass();
-  console.log(classes);
   const total = classes.reduce((sum, item) => item.price + sum, 0);
 
 const handelDelate = (item)=>{
@@ -62,7 +63,7 @@ const handelDelate = (item)=>{
              </thead>
              <tbody className="text-xl">
                  {
-                     classes.map((item, index) => <tr
+                     classes?.map((item, index) => <tr
                          key={item._id}
                      >
                          <td>

@@ -6,7 +6,7 @@ import useClass from "../../../hooks/useClass";
 
 const Navbar = () => {
       const {user,logOut} = useAuth()
-      const [classes] = useClass()
+      const [classes] = useClass();
       const handleLogOut=()=>{
           logOut()
           .then(()=>{})

@@ -9,11 +9,13 @@ const PopularCard = ({data} ) => {
      const [ ,refetch ] = useClass();
 //   console.log(data);
   const { image, studentCount, subject, description, price, _id } = data;
-  console.log(_id);
+//   console.log(_id);
      const {user} = useAuth();
+     console.log(user);
      const handelCard = data =>{
           console.log( data);
      if(user && user?.email){
+          console.log(user);
            const itemclass = {classId: _id,image,   subject, price,   email :user?.email}
           fetch('http://localhost:5000/my-class',{
                method:"POST",
