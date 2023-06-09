@@ -98,9 +98,9 @@ const Register = () => {
             <div className="form-control mt-6">
               <input type="submit" className="btn bg-[#2e9cf0] w-80" value="Login" />
             </div>
-                   <dir>
+                   <div>
                         <p> Already Have a account ? Please <Link to='/login' className="link"> Login</Link></p>
-                   </dir>
+                   </div>
               <div>
                <SocialLogin></SocialLogin>
               </div>
