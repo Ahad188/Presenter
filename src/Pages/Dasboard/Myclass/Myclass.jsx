@@ -39,7 +39,7 @@ const handelDelate = (item)=>{
 }
 
   return (
-    <div className="w-full h-[100vh]">
+    <div className="w-full ">
       <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center mt-8">
         <h3 className="text-3xl">Total class: {classes.length}</h3>
         <h3 className="text-3xl">  Price: ${total.toFixed(2)}</h3>
@@ -61,7 +61,7 @@ const handelDelate = (item)=>{
                      <th>Action</th>
                  </tr>
              </thead>
-             <tbody className="text-xl">
+             <tbody className="text-xl ">
                  {
                      classes?.map((item, index) => <tr
                          key={item._id}

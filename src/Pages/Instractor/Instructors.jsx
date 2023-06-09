@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import TeacherCard from "../Home/PopularTeacher/TeacherCard";
+
 import AllTeacher from "../../Component/AllTeacher";
 import { useQuery } from "@tanstack/react-query";
  
@@ -10,12 +9,13 @@ import { useQuery } from "@tanstack/react-query";
  const Instructors = () => {
        
      const {data: teacher=[]} = useQuery({
-          queryKey:['classes'],
+          queryKey:['teachers'],
           queryFn: async ()=>{
-               const  res = await fetch('http://localhost:5000/classes')
+               const  res = await fetch('http://localhost:5000/teachers')
                return res.json()
           }
      })
+     // console.log(teacher);
      return (
         <>
          

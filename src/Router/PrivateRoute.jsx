@@ -8,7 +8,15 @@ const PrivateRoute = ({children}) => {
      const location = useLocation();
 
      if(loading){
-          return  <HashLoader color="#36d7b7" />
+          return  <div  className='
+          h-[100vh]
+          flex 
+          flex-col 
+          justify-center 
+          items-center 
+        '>
+               <HashLoader color="#36d7b7" />
+          </div>
      }
 
 
