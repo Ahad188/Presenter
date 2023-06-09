@@ -12,6 +12,7 @@ import Allusers from "../Pages/Dasboard/Allusers/Allusers";
 import AdminRoute from "./AdminRoute";
 import AddClass from "../Pages/Dasboard/AddClass/AddClass";
 import ManegeClass from "../Pages/Dasboard/ManegeClass/ManegeClass";
+import Payment from "../Pages/Dasboard/Payment/Payment";
  
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
                {
                     path:'my-class',
                     element:<Myclass/>
+               },
+               {
+                    path:'payment',
+                    element:<Payment></Payment>
                },
                {
                     path:'allusers',
