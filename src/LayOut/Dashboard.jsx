@@ -30,7 +30,7 @@ const Dashboard = () => {
                <li><Link className="text-2xl">Admin Home</Link></li>
                <li><Link className="text-2xl" to='/dashboard/my-class'>My-class</Link></li>
                <li><Link to='/dashboard/allusers' className="text-2xl">All Users</Link></li>
-               <li><Link className="text-2xl">Add Class</Link></li>
+               <li><Link to='/dashboard/addclass' className="text-2xl">Add Class</Link></li>
                <li><Link className="text-2xl">Add Teacher</Link></li>
                
                </> : <>
