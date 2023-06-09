@@ -13,12 +13,16 @@ import AdminRoute from "./AdminRoute";
 import AddClass from "../Pages/Dasboard/AddClass/AddClass";
 import ManegeClass from "../Pages/Dasboard/ManegeClass/ManegeClass";
 import Payment from "../Pages/Dasboard/Payment/Payment";
+import AddTeacher from "../Pages/Dasboard/AddTeacher/AddTeacher";
+import ManegeTeacher from "../Pages/Dasboard/ManegTeacher/ManegeTeacher";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
  
 
 const router = createBrowserRouter([
      {
        path: "/",
        element: <MainLayout/>,
+       errorElement:<ErrorPage/>,
        children:[
           {
                path:'/',
@@ -56,16 +60,24 @@ const router = createBrowserRouter([
                     element:<Payment></Payment>
                },
                {
-                    path:'allusers',
+                    path:'all-users',
                     element:<AdminRoute><Allusers/></AdminRoute>,
                },
                {
-                    path:'addclass',
+                    path:'add-class',
                     element:<AdminRoute><AddClass/></AdminRoute>
                },
                {
                     path:'manege-class',
                     element:<AdminRoute><ManegeClass/></AdminRoute>
+               },
+               {
+                    path:'add-teacher',
+                    element:<AdminRoute><AddTeacher/></AdminRoute>
+               },
+               {
+                    path:'manege-teacher',
+                    element:<AdminRoute><ManegeTeacher/></AdminRoute>
                }
           ]
      }

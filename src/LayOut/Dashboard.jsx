@@ -28,10 +28,11 @@ const Dashboard = () => {
                isAdmin ? <>
                
                <li><Link className="text-2xl">Admin Home</Link></li>
-               <li><Link to='/dashboard/allusers' className="text-2xl">All Users</Link></li>
-               <li><Link to='/dashboard/addclass' className="text-2xl">Add Class</Link></li>
+               <li><Link to='/dashboard/all-users' className="text-2xl">All Users</Link></li>
+               <li><Link to='/dashboard/add-class' className="text-2xl">Add Class</Link></li>
                <li><Link to='/dashboard/manege-class' className="text-2xl">Manege Class</Link></li>
-               <li><Link className="text-2xl">Add Teacher</Link></li>
+               <li><Link to='/dashboard/add-teacher' className="text-2xl">Add Teacher</Link></li>
+               <li><Link to='/dashboard/manege-teacher' className="text-2xl">Manege Teacher</Link></li>
                <li><Link className="text-2xl" to='/dashboard/my-class'>My-class</Link></li>
                
                </> : <>
