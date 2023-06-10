@@ -13,17 +13,17 @@ const Classes = () => {
   });
 
   return (
-     <>
-     <Helmet>
-            <title>Presenter / Classes</title>
-          </Helmet>
-     
-    <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
-      {classes?.map((data) => (
-        <PopularCard key={data._id} data={data}></PopularCard>
-      ))}
-    </div>
-     </>
+    <>
+      <Helmet>
+        <title>Presenter / Classes</title>
+      </Helmet>
+
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
+        {classes?.map((data) => (
+          <PopularCard key={data._id} data={data}></PopularCard>
+        ))}
+      </div>
+    </>
   );
 };
 

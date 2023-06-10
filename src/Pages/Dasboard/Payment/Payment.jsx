@@ -16,7 +16,7 @@ const Payment = () => {
             <title>Presenter / Payment</title>
           </Helmet>
           <div className="w-[900px] mx-auto">
-               <h2>Payment system is here</h2>
+               <h2 className='text-3xl font-bold'>Payment system is here</h2>
                <Elements stripe={stripePromise}>
                      <CheckOut classes={classes} price={price}></CheckOut>
                </Elements>

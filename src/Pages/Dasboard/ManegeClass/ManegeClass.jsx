@@ -37,52 +37,52 @@ const ManegeClass = () => {
   };
 
   return (
-     <>
-     <Helmet>
-            <title>Presenter / Manege-Class</title>
-          </Helmet>
-    <div className="w-full">
-      <div className="overflow-x-auto w-full">
-        <table className="table w-full">
-          {/* head */}
-          <thead className="text-2xl">
-            <tr>
-              <th>#</th>
-              <th>Subject</th>
-              <th>TeacherName</th>
-              <th>Price</th>
+    <>
+      <Helmet>
+        <title>Presenter / Manege-Class</title>
+      </Helmet>
+      <div className="w-full">
+        <div className="overflow-x-auto w-full">
+          <table className="table w-full">
+            {/* head */}
+            <thead className="text-2xl">
+              <tr>
+                <th>#</th>
+                <th>Subject</th>
+                <th>TeacherName</th>
+                <th>Price</th>
 
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {classes.map((item, index) => (
-              <tr key={item._id}>
-                <td>{index + 1}</td>
-                <td>
-                  <div className="flex items-center space-x-3">
-                    <div>
-                      <div className="font-bold">{item.subject}</div>
-                    </div>
-                  </div>
-                </td>
-                <td>{item.teacherName}</td>
-                <td className="">${item.price}</td>
-                <td>
-                  <button
-                    onClick={() => handleDelete(item)}
-                    className="btn btn-ghost bg-red-600  text-white"
-                  >
-                    <FaTrashAlt></FaTrashAlt>
-                  </button>
-                </td>
+                <th>Delete</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {classes.map((item, index) => (
+                <tr key={item._id}>
+                  <td>{index + 1}</td>
+                  <td>
+                    <div className="flex items-center space-x-3">
+                      <div>
+                        <div className="font-bold">{item.subject}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{item.teacherName}</td>
+                  <td className="">${item.price}</td>
+                  <td>
+                    <button
+                      onClick={() => handleDelete(item)}
+                      className="btn btn-ghost bg-red-600  text-white"
+                    >
+                      <FaTrashAlt></FaTrashAlt>
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-     </>
+    </>
   );
 };
 

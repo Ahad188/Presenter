@@ -32,29 +32,28 @@ const Allusers = () => {
         }
       });
   };
-   const handleDelete = (user)=>{
-     console.log(user);
-     Swal.fire({
-          title: "Are you sure?",
-          text: "You won't be able to revert this!",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            axiosSecure.delete(`/users/${user._id}`).then((res) => {
-              console.log("deleted res", res.data);
-              if (res.data.deletedCount > 0) {
-                refetch();
-                Swal.fire("Deleted!", "Your file has been deleted.", "success");
-              }
-            });
+  const handleDelete = (user) => {
+    console.log(user);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure.delete(`/users/${user._id}`).then((res) => {
+          console.log("deleted res", res.data);
+          if (res.data.deletedCount > 0) {
+            refetch();
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
           }
         });
-
-   }
+      }
+    });
+  };
   return (
     <div className="w-full">
       <h2 className="text-center text-3xl font-semibold">All users :{users.length}</h2>
@@ -92,7 +91,7 @@ const Allusers = () => {
                 </td>
                 <td>
                   <button
-                        onClick={() => handleDelete(user)}
+                    onClick={() => handleDelete(user)}
                     className="btn btn-ghost bg-red-600  text-white"
                   >
                     <FaTrashAlt></FaTrashAlt>

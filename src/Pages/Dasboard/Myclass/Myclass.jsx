@@ -7,9 +7,11 @@ import { Helmet } from "react-helmet-async";
 
 const Myclass = () => {
   const [classes, refetch] = useClass();
+  console.log(classes);
   const total = classes.reduce((sum, item) => item.price + sum, 0);
 
   const handelDelate = (item) => {
+//     console.log(item._id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -55,8 +57,8 @@ const Myclass = () => {
             <thead className="text-2xl">
               <tr>
                 <th>#</th>
-                <th>Food</th>
-                <th>Item Name</th>
+                <th>Image</th>
+                <th>Subject</th>
                 <th>Price</th>
                 <th>Action</th>
               </tr>
@@ -66,7 +68,7 @@ const Myclass = () => {
                 <tr key={item._id}>
                   <td>{index + 1}</td>
                   <td>
-                    <div className="avatar">
+                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
                         <img src={item.image} alt="Avatar Tailwind CSS Component" />
                       </div>
