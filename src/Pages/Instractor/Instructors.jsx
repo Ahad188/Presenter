@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import AllTeacher from "../../Component/AllTeacher";
 import { useQuery } from "@tanstack/react-query";
  
@@ -18,7 +19,9 @@ import { useQuery } from "@tanstack/react-query";
      // console.log(teacher);
      return (
         <>
-         
+         <Helmet>
+            <title>Presenter / Instructor</title>
+          </Helmet>
         {
           teacher?.map(teacher=> <AllTeacher
           key={teacher._id}

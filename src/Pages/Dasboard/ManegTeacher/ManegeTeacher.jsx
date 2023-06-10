@@ -2,6 +2,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
  
 
@@ -39,6 +40,10 @@ const ManegeTeacher = () => {
 
 
      return (
+          <>
+          <Helmet>
+            <title>Presenter / Manege-Teacher</title>
+          </Helmet>
           <div className="w-full">
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
@@ -79,7 +84,8 @@ const ManegeTeacher = () => {
           </tbody>
         </table>
       </div>
-    </div>
+          </div>
+          </>
      );
 };
 

@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const image_token = import.meta.env.VITE_IMAGE_KEY;
 
@@ -54,6 +55,10 @@ const AddClass = () => {
   };
 
   return (
+    <>
+    <Helmet>
+            <title>Presenter / Add-class</title>
+     </Helmet>
     <div>
       <h2 className="text-center text-2xl font-bold">Add one More class</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -149,6 +154,7 @@ const AddClass = () => {
         </div>
       </form>
     </div>
+    </>
   );
 };
 

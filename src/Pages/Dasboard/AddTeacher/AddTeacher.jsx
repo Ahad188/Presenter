@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const image_token = import.meta.env.VITE_IMAGE_KEY;
 
@@ -51,75 +52,80 @@ const AddTeacher = () => {
   };
 
   return (
-    <div>
-      <h2 className="text-center text-2xl font-bold">Add one More Teacher</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="w-[450px] mx-auto border border-[#2e9cf0] border-r-8 border-b-8 p-10 my-20">
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-xl">TeacherName :</span>
-            </label>
-            <input
-              type="text"
-              {...register("teacherName", { required: true })}
-              placeholder="TeacherName"
-              className="input input-bordered w-full"
-            />
-          </div>
+    <>
+      <Helmet>
+        <title>Presenter / Add Teacher</title>
+      </Helmet>
+      <div>
+        <h2 className="text-center text-2xl font-bold">Add one More Teacher</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <div className="w-[450px] mx-auto border border-[#2e9cf0] border-r-8 border-b-8 p-10 my-20">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl">TeacherName :</span>
+              </label>
+              <input
+                type="text"
+                {...register("teacherName", { required: true })}
+                placeholder="TeacherName"
+                className="input input-bordered w-full"
+              />
+            </div>
 
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text text-xl">Subject :</span>
-            </label>
-            <input
-              type="text"
-              {...register("subject")}
-              placeholder="Subject"
-              className="input input-bordered w-[340px]"
-            />
-          </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text text-xl">Subject :</span>
+              </label>
+              <input
+                type="text"
+                {...register("subject")}
+                placeholder="Subject"
+                className="input input-bordered w-[340px]"
+              />
+            </div>
 
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-xl"> TotalStudent : </span>
-            </label>
-            <input
-              type="text"
-              {...register("totalstudent", { required: true })}
-              placeholder="total-student"
-              className="input input-bordered w-full"
-            />
-          </div>
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text text-xl">Email :</span>
-            </label>
-            <input
-              type="email"
-              {...register("email")}
-              placeholder="email"
-              className="input input-bordered  max-w-xs"
-            />
-          </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-xl"> TotalStudent : </span>
+              </label>
+              <input
+                type="text"
+                {...register("totalstudent", { required: true })}
+                placeholder="total-student"
+                className="input input-bordered w-full"
+              />
+            </div>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text text-xl">Email :</span>
+              </label>
+              <input
+                type="email"
+                {...register("email")}
+                placeholder="email"
+                className="input input-bordered  max-w-xs"
+              />
+            </div>
 
-          <div className="form-control w-full max-w-xs">
-            <label className="label">
-              <span className="label-text text-xl"> Image:</span>
-            </label>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text text-xl"> Image:</span>
+              </label>
 
-            <input
-              type="file"
-              {...register("image")}
-              className="file-input file-input-bordered file-input-info w-full max-w-xs"
-            />
-          </div>
+              <input
+                type="file"
+                {...register("image")}
+                className="file-input file-input-bordered file-input-info w-full max-w-xs"
+              />
+            </div>
 
-          <div className="form-control mt-6">
-            <input type="submit" className="btn bg-[#2e9cf0] w-[340px]" value="Add teacher" />
+            <div className="form-control mt-6">
+              <input type="submit" className="btn bg-[#2e9cf0] w-[340px]" value="Add teacher" />
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </>
   );
 };
 
