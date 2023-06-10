@@ -34,6 +34,26 @@ const Allusers = () => {
   };
    const handleDelete = (user)=>{
      console.log(user);
+     Swal.fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            axiosSecure.delete(`/users/${user._id}`).then((res) => {
+              console.log("deleted res", res.data);
+              if (res.data.deletedCount > 0) {
+                refetch();
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              }
+            });
+          }
+        });
+
    }
   return (
     <div className="w-full">
