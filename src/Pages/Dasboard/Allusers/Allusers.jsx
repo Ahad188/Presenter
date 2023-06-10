@@ -32,7 +32,9 @@ const Allusers = () => {
         }
       });
   };
-
+   const handleDelete = (user)=>{
+     console.log(user);
+   }
   return (
     <div className="w-full">
       <h2 className="text-center text-3xl font-semibold">All users :{users.length}</h2>
@@ -70,7 +72,7 @@ const Allusers = () => {
                 </td>
                 <td>
                   <button
-                    //     onClick={() => handleDelete(user)}
+                        onClick={() => handleDelete(user)}
                     className="btn btn-ghost bg-red-600  text-white"
                   >
                     <FaTrashAlt></FaTrashAlt>

@@ -1,18 +1,11 @@
- 
- 
+
 import TeacherCard from "./TeacherCard";
 import { useQuery } from "@tanstack/react-query";
 
  
 
 const PopularTeacher = () => {
-// const [teachers, setTeacher] = useState()
-//      useEffect(()=>{
-//           fetch('../../../../public/teacher.json')
-//           .then (res=>res.json())
-//           .then(data=>setTeacher(data))
-//      },[])
-     // console.log(teachers);
+ 
      const { data : teachers = []}  = useQuery({
           queryKey:['teachers'],
           queryFn: async ()=>{
@@ -21,8 +14,9 @@ const PopularTeacher = () => {
           }
           
      })
+      
 
-
+console.log(teachers);
 
      return (
           <>

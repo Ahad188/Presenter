@@ -5,17 +5,7 @@ import PopularCard from "./PopularCard";
  
 
 const PopularClass = () => {
-//      const [datas, setData] = useState();
-// // console.log(datas);
-//      useEffect(()=>{
-//           fetch('../../../../public/Class.json')
-//           .then(res=>res.json())
-//           .then(data=>  {
-               
-//                setData(data)
-//           })
-
-//      },[])
+ 
 
      const { refetch,data: datas =[]} = useQuery({
           queryKey: ['classes'],
