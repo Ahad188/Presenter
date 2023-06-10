@@ -7,7 +7,9 @@ const image_token = import.meta.env.VITE_IMAGE_KEY;
 const AddClass = () => {
   const [axiosSecure] = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
+  
   const hosting_url = `https://api.imgbb.com/1/upload?key=${image_token}`;
+
   const onSubmit = (data) => {
     //     console.log(data);
     const formData = new FormData();
@@ -55,7 +57,7 @@ const AddClass = () => {
     <div>
       <h2 className="text-center text-2xl font-bold">Add one More class</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="text-center text-4xl my-5"> Please Register</h2>
+         
         <div className="w-[450px] mx-auto border border-[#2e9cf0] border-r-8 border-b-8 p-10 my-20">
           <div className="form-control w-full max-w-xs">
             <label className="label">
