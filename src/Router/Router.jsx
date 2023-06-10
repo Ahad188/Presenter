@@ -16,6 +16,7 @@ import Payment from "../Pages/Dasboard/Payment/Payment";
 import AddTeacher from "../Pages/Dasboard/AddTeacher/AddTeacher";
 import ManegeTeacher from "../Pages/Dasboard/ManegTeacher/ManegeTeacher";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import DashboardHome from "../Pages/Dasboard/DashboardHome/DashboardHome";
  
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
           path:'dashboard',
           element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
           children:[
+               {
+                    path:'dashHome',
+                    element:<DashboardHome/>
+               },
                {
                     path:'my-class',
                     element:<Myclass/>

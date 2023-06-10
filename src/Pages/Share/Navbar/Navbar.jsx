@@ -17,6 +17,10 @@ const Navbar = () => {
          <li><Link className="text-xl" to="/">Home</Link></li>
         <li><Link className="text-xl" to="/instructors">Instructors</Link></li>
         <li><Link className="text-xl" to="/classes">Classes</Link></li>
+        {
+          user ? <li><Link className="text-xl" to="/dashboard/dashHome">Dashboard</Link></li>:
+           ''
+        }
         <li>
             <Link to="/dashboard/my-class" className="text-xl">
                 
