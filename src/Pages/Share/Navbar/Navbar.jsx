@@ -12,7 +12,7 @@ const Navbar = () => {
           .then(()=>{})
           .catch(er=>console.log(er))
      }
-     
+     console.log(classes);
      const navOptions = <>
          <li><Link className="text-xl" to="/">Home</Link></li>
         <li><Link className="text-xl" to="/instructors">Instructors</Link></li>

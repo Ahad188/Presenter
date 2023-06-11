@@ -1,5 +1,4 @@
 import img from "../../../assets/slider/img.jpg";
-import img2 from "../../../assets/slider/img (2).jpg";
 import img3 from "../../../assets/slider/img (3).jpg";
 import img4 from "../../../assets/slider/img (4).jpg";
 import img5 from "../../../assets/slider/img (5).jpg";

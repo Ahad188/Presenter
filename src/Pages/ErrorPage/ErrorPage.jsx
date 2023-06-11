@@ -1,6 +1,6 @@
  
 import { Link, useRouteError } from "react-router-dom";
-import sad from '../../../public/sad2.json'
+import sad from '../../assets/animation/sad2.json'
 import Lottie from "lottie-react";
 
 const ErrorPage = () => {

@@ -17,7 +17,7 @@ const PopularCard = ({ data }) => {
     if (user && user?.email) {
       console.log(user);
       const itemclass = { classId: _id, image, subject, price, email: user?.email };
-      fetch("http://localhost:5000/my-class", {
+      fetch("   https://presenter-server.vercel.app/my-class", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -15,7 +15,7 @@ const SocialLogin = () => {
       const logGoogleUser = result.user;
       console.log(logGoogleUser);
       const saveUser = { name: logGoogleUser.displayName, email: logGoogleUser.email };
-      fetch("http://localhost:5000/users", {
+      fetch("https://presenter-server.vercel.app/users", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(saveUser),
