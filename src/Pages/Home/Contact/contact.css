@@ -8,8 +8,7 @@
 	justify-content: center;
 	text-align: center;
 	border-radius: 12px;
-	background-image: url(../img/intro.png);
-	background-size: cover;
+ 
 }
 .center h3{
 	font-size: 30px;
@@ -43,4 +42,21 @@
 	margin: 0 10px 20px 0;
 	border-radius: 30px;
 	cursor: pointer;
+}
+
+/*media*/
+@media (max-width: 1425px){
+	.contack{
+		width: 95%;
+		transition: .3s;
+	}
+	 
+}
+ 
+ 
+/*540 media*/
+@media (max-width: 540px){
+	.contack .acton form input[type="email"] {
+		width: 310px;
+	}
 }
